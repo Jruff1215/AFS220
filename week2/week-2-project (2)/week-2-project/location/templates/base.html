@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>
+        {% if pageTitle %}
+            {{ pageTitle }} @
+        {% endif %}
+        SoCal Excursion
+    </title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">SoCal Excursion</a>
+        </div>
+        <nav>
+            <ul>
+                <li>Art & Culture</li>
+                <li>Family Fun</li>
+                <li>Food & Drink</li>
+                <li>Beaches</li>
+                <li>Newsletter</li>
+                <li>Shopping</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- All content from other pages goes here. -->
+    {% block content %}{% endblock content %}
+
+    <footer>
+        &copy; Copyright 2022
+    </footer>
+</body>
+</html>
